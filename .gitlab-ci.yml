@@ -1,0 +1,22 @@
+image: node:latest
+
+cache:
+  paths:
+   - node_modules/
+
+before_script:
+  - npm install -g gulp
+  - yarn
+
+stages:
+  - build
+
+pages:
+  stage: build
+  only:
+   - dev
+  artifacts:
+    paths:
+    - public
+  script:
+   - gulp build
