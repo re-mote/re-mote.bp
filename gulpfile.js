@@ -7,6 +7,7 @@ const pug = require('gulp-pug');
 const concat = require("gulp-concat");
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
+const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 const gulpif = require('gulp-if');
@@ -86,8 +87,10 @@ gulp.task('templates_page', function () {
 gulp.task('styles', function () {
   return gulp.src(paths.css.src)
     .pipe(plumber())
-    .pipe(sass())
-    .pipe(autoprefixer())
+    .pipe(sourcemaps.init())
+      .pipe(sass())
+      .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
     .pipe(gulpif(global.isBuild, cachebust.resources()))
     .pipe(gulp.dest(paths.css.dest))
     .pipe(browserSync.reload({
@@ -98,7 +101,9 @@ gulp.task('styles', function () {
 gulp.task('scriptsVendor', function () {
   return gulp.src(paths.jsVendor.src)
     .pipe(plumber())
-    .pipe(concat('vendor.js'))
+    .pipe(sourcemaps.init())
+      .pipe(concat('vendor.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulpif(global.isBuild, cachebust.resources()))
     .pipe(gulp.dest(paths.jsVendor.dest))
     .pipe(browserSync.reload({
@@ -111,7 +116,9 @@ gulp.task('scriptsVendor', function () {
 gulp.task('scripts', function () {
   return gulp.src(paths.js.src)
     .pipe(plumber())
-    .pipe(concat('scripts.js'))
+    .pipe(sourcemaps.init())
+      .pipe(concat('scripts.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulpif(global.isBuild, cachebust.resources()))
     .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.reload({
