@@ -13,7 +13,7 @@
   "rules": {
     "aditayvm/at-rule-no-children": [
       {
-        ignore: ["mixin"],
+        ignore: ["mixin", "keyframes"],
       }
     ],
     "plugin/declaration-block-no-ignored-properties": true,
