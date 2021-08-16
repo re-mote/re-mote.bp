@@ -1,9 +1,10 @@
-Чтобы собрать и запустить проект:
 
-1. Должен быть установлен [Yarn](https://yarnpkg.com) (требует установленный [node.js](https://nodejs.org)).
+To build and run a project:
 
-2. В командной строке, находясь в папке с проектом, нужно выполнить команду: `$ yarn`.
+1. [Node.js](https://nodejs.org) and [Yarn](https://yarnpkg.com) must be installed.
 
-3. Затем, после установки всех пакетов:
-  - `$ gulp build` — чтобы просто собрать проект. В корне проекта появится папка public, в которой будет вся вёрстка в HTML/CSS/JS формате.
-  - `$ gulp dev` — чтобы собрать проект и запустить его на локальном сервере. После запуска в браузере должна автоматически открыться страница с собранным проектом (обычно это [http://localhost:3000](http://localhost:3000)).
+2. Run the command `$ yarn` in the project folder.
+
+3. After installing all the packages:
+  - `$ gulp build` - to build the project. The folder "public" will appear, which will contain the entire layout in HTML / CSS / JS format.
+  - `$ gulp dev` - to build the project and run it on the local server. After launching, the page with the compiled project should automatically open in the browser (usually it's [http://localhost:3000](http://localhost:3000)).

@@ -4,10 +4,7 @@
     "lint": "prettier --write \"src/blocks/**/*.scss\" \"src/styles/**/*.scss\" && stylelint \"src/blocks/**/*.scss\" \"src/styles/**/*.scss\" --fix --config ./.stylelintrc-format"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
-    "bootstrap": "^4.2.1",
-    "select2": "^4.0.10",
-    "slick-carousel": "^1.8.1"
+    "bootstrap": "^5.0.2"
   },
   "browserslist": [
     "defaults"
