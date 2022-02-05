@@ -75,7 +75,6 @@
     "shorthand-property-no-redundant-values": true,
     "string-no-newline": true,
     "string-quotes": "single",
-    "unit-blacklist": ["rem"],
     "order/properties-order": [
       "position",
       "z-index",

@@ -26,11 +26,19 @@ p,
 .p {
 }
 
-.font-weight-medium {
+.fw-thin {
+  font-weight: 100;
+}
+
+.fw-medium {
   font-weight: 500;
 }
 
-.font-weight-black {
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-black {
   font-weight: 900;
 }
 
