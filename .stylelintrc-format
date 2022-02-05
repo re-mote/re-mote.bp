@@ -46,7 +46,7 @@
       }
     ],
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["function", "if", "each", "include", "mixin", "return"]
+      "ignoreAtRules": ["function", "if", "each", "include", "mixin", "return", "for"]
     }],
     "function-calc-no-unspaced-operator": true,
     "function-whitespace-after": "always",
